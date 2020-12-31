@@ -43,7 +43,7 @@ sudo apt -y install php php-mysql php-gd php-mbstring php-posix php-bcmath php-x
 echo "date.timezone =Europe/Warsaw" |sudo tee -a /etc/php/7.4/apache2/php.ini
 
 sudo mkdir -p $backup_dir
-sudo chown -R 48:48 $backup_dir
+sudo chown -R 33:33 $backup_dir
 sudo chmod -R 755 $backup_dir
 
 sudo mkdir /etc/lms
