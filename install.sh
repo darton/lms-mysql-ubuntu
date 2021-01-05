@@ -92,7 +92,7 @@ echo "    DocumentRoot /var/www/html/lms" | sudo tee -a $virtualhost_lms_conf
 echo "    ServerName $FQDN" | sudo tee -a $virtualhost_lms_conf
 echo "    ErrorLog logs/$FQDN-error_log" | sudo tee -a $virtualhost_lms_conf
 echo "    CustomLog logs/$FQDN-access_log common" | sudo tee -a $virtualhost_lms_conf
-echo "</VirtualHost>" | sudo tee -a $virtualhost_conf
+echo "</VirtualHost>" | sudo tee -a $virtualhost_lms_conf
 
 sudo touch $virtualhost_userpanel_conf
 
