@@ -84,8 +84,6 @@ sudo chmod -R 755 /var/www/html/lms/js/xajax_js/deferred
 sudo chown 33:33 /var/www/html/lms/userpanel/templates_c
 sudo chmod 755 /var/www/html/lms/userpanel/templates_c
 
-sudo touch virtualhost_lms_conf
-
 echo "<VirtualHost *:80>" | sudo tee -a $virtualhost_lms_conf
 echo "    ServerAdmin $WEBMASTER_EMAIL" | sudo tee -a $virtualhost_lms_conf
 echo "    DocumentRoot /var/www/html/lms" | sudo tee -a $virtualhost_lms_conf
@@ -93,8 +91,6 @@ echo "    ServerName $FQDN" | sudo tee -a $virtualhost_lms_conf
 echo "    ErrorLog logs/$FQDN-error_log" | sudo tee -a $virtualhost_lms_conf
 echo "    CustomLog logs/$FQDN-access_log common" | sudo tee -a $virtualhost_lms_conf
 echo "</VirtualHost>" | sudo tee -a $virtualhost_lms_conf
-
-sudo touch $virtualhost_userpanel_conf
 
 echo "<VirtualHost *:80>" | sudo tee -a $virtualhost_userpanel_conf
 echo "    ServerAdmin $WEBMASTER_EMAIL" | sudo tee -a $virtualhost_userpanel_conf
