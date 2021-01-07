@@ -108,7 +108,7 @@ sudo systemctl start mysql.service
 sudo systemctl enable mysql.service
 
 sudo mysql -u root -e "CREATE DATABASE $lms_db CHARACTER SET utf8 COLLATE utf8_polish_ci;"
-sudo mysql -u root -e "CREATE USER $lms_db_user@$lms_db_user@$lms_db_host IDENTIFIED BY $lms_db_password;"
+sudo mysql -u root -e "CREATE USER $lms_db_user@$lms_db_host IDENTIFIED BY $lms_db_password;"
 sudo mysql -u root -e "GRANT ALL ON $lms_db.* TO $lms_db_user@$lms_db_host ;"
 sudo mysql -u root -e "flush privileges;"
 sudo mysql -u root -e "use $lms_db; source $LMS_DIR/doc/lms.mysql;"
